@@ -27,10 +27,15 @@ const { reviewsPunctuation } = require("./models/ReviewsPuntajes/index");
 const { promocionesModels } = require("./models/Promociones");
 const { newsletterModels } = require("./models/Newsletter");
 
-const { DB_USER, DB_PASSWORD, DB_HOST, DB_NAME_BD } = process.env;
+const { DB_USER, DB_PASSWORD, DB_HOST, DB_NAME_BD, DB_DEPLOY_RAILWAY } = process.env;
+
+// const sequelize = new Sequelize(
+//   `postgres://${DB_USER}:${DB_PASSWORD}@${DB_HOST}/${DB_NAME_BD}`,
+//   { logging: false }
+// );
 
 const sequelize = new Sequelize(
-  `postgres://${DB_USER}:${DB_PASSWORD}@${DB_HOST}/${DB_NAME_BD}`,
+  DB_DEPLOY_RAILWAY,
   { logging: false }
 );
 
