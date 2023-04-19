@@ -1,6 +1,8 @@
 const app = require("./src/app.js");
+require("dotenv").config();
 const { sequelize } = require("./src/db.js");
-const port = 3001
+const { PORT } = process.env;
+const port = PORT
 
 app.listen(port,()=>{
     sequelize.sync({ force: false });
