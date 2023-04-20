@@ -34,8 +34,8 @@ const createPreferenceHandlers = async (req, res) => {
         payer: player,
         promo: player.descuento,
         back_urls: {
-            "success": "https:pf-henry-footwear-production.up.railway.app/success",
-            "failure": "https:pf-henry-footwear-production.up.railway.app/failure",
+            "success": "https://pf-henry-footwear-production.up.railway.app/success",
+            "failure": "https://pf-henry-footwear-production.up.railway.app/success",
             "pending": ""
         },
         auto_return: "approved",
