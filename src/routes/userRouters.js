@@ -20,7 +20,7 @@ const userRouter = Router();
 userRouter.post("/registro",verifyEmail, postRegistroHandller)
 userRouter.post("/login", postLoginUser)
 userRouter.post("/google", postLoginGoogle)
-userRouter.post("/:id",[verifyToken, verifyDataUser, isUserBlocked], postUserHandler);
+userRouter.post("/:id",[verifyToken, isUserBlocked], postUserHandler);
 userRouter.get("/",[verifyToken, isAdmin, isUserBlocked], getUsersHandler);
 userRouter.get("/datos/:userId", [verifyToken, isUserBlocked], getDataUserHandler)
 userRouter.put("/:id", [verifyToken,isAdmin, isUserBlocked],updateUserRolHandlers);
