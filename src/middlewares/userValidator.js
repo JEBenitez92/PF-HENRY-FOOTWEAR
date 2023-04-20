@@ -5,7 +5,7 @@ const { json } = require("body-parser");
 const { SECRET } = process.env;
 
 // const rexgDireccion =/^[^,]+(?:[,\s]+[^,]+)+[,\s]*[a-zA-ZáéíóúüñÑ\s]+[,\s]*[a-zA-ZáéíóúüñÑ\s]+[,\s]*cp:\s*\d{4,5}$/i
-const rexTelefono = /^\+\d{1,4} \d{10,15}$/
+// const rexTelefono = /^\+\d{1,4} \d{10,15}$/
 const largoString = /[A-Za-z]{3,}/
 const rexgEmail = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/
 
