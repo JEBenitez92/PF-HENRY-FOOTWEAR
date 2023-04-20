@@ -4,7 +4,8 @@ const { verifyToken, isAdmin, isUserBlocked } = require("../middlewares/userVali
 
 const productRouter = Router();
 
-productRouter.post("/",[verifyToken, isAdmin, isUserBlocked],createProductHandler)
+// productRouter.post("/",[verifyToken, isAdmin, isUserBlocked],createProductHandler)
+productRouter.post("/",createProductHandler)
 productRouter.get("/", getProductHandler)
 productRouter.get("/punctuation",productPunctuationHandler)
 productRouter.get("/:pruductId", getProductIdHandler)
